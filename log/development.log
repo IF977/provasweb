@@ -1,0 +1,376 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-14 06:53:57 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 31ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2015-01-14 06:53:58 -0300
+Processing by Rails::InfoController#properties as */*
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 8.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-14 06:56:00 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 24ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2015-01-14 06:56:01 -0300
+Processing by Rails::InfoController#properties as */*
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/info/properties.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 6.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-14 23:57:22 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 30ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2015-01-14 23:57:25 -0300
+Processing by Rails::InfoController#properties as */*
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.1.6/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 9.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 00:02:50 -0300
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProfs (20150115030036)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "profs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "senha" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150115030036"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 00:03:04 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1175ms (Views: 1155.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/profs.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/profs.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:05 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 00:03:09 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:09 -0300
+
+
+Started GET "/assets/profs.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:09 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:09 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 00:03:10 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:10 -0300
+
+
+Started GET "/assets/profs.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:10 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 00:03:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDiscplinas (20150115030954)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "discplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "prof_id_id" integer, "assunto_id_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_discplinas_on_prof_id_id" ON "discplinas" ("prof_id_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_discplinas_on_prof_id_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_discplinas_on_prof_id_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_discplinas_on_assunto_id_id" ON "discplinas" ("assunto_id_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150115030954"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_discplinas_on_assunto_id_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_discplinas_on_assunto_id_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_discplinas_on_prof_id_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_discplinas_on_prof_id_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 00:10:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 293ms (Views: 270.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/discplinas.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/profs.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/discplinas.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/assets/profs.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:54 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/discplinas.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/profs.css?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/profs.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/assets/discplinas.js?body=1" for 127.0.0.1 at 2015-01-15 00:10:56 -0300
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2015-01-15 00:10:59 -0300
+
+ActionController::RoutingError (No route matches [GET] "/disciplinas"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.7ms)
+
+
+Started GET "/discplinas" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+Processing by DiscplinasController#index as HTML
+  [1m[35mDiscplina Load (0.6ms)[0m  SELECT "discplinas".* FROM "discplinas"
+  Rendered discplinas/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 58ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/discplinas.css?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/profs.css?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/discplinas.js?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/profs.js?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 00:11:12 -0300
+
+
+Started GET "/discplinas/new" for 127.0.0.1 at 2015-01-15 00:11:14 -0300
+Processing by DiscplinasController#new as HTML
+  Rendered discplinas/_form.html.erb (19.6ms)
+  Rendered discplinas/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/discplinas" for 127.0.0.1 at 2015-01-15 00:11:19 -0300
+Processing by DiscplinasController#index as HTML
+  [1m[36mDiscplina Load (0.1ms)[0m  [1mSELECT "discplinas".* FROM "discplinas"[0m
+  Rendered discplinas/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.1ms)
