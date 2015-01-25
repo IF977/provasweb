@@ -7,6 +7,11 @@ class ProfsController < ApplicationController
     @profs = Prof.all
   end
 
+
+  def reset_senha
+
+  end
+
   # GET /profs/1
   # GET /profs/1.json
   def show
@@ -69,6 +74,6 @@ class ProfsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prof_params
-      params.require(:prof).permit(:nome, :email, :senha)
+      params.require(:prof).permit(:nome, :email, :senha, :login)
     end
 end

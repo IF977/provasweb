@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
-  resources :disciplinas
+  
 
+  resources :provas
+
+  resources :quests
+
+  get 'main/index'
+
+  resources :assuntos
+
+  get 'profs/reset_senha'
   resources :profs
+
+  resources :discs
 
   root 'home#index'
 

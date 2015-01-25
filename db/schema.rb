@@ -11,23 +11,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115030954) do
+ActiveRecord::Schema.define(version: 20150124185249) do
 
-  create_table "discplinas", force: true do |t|
+  create_table "assuntos", force: true do |t|
     t.string   "nome"
-    t.integer  "prof_id_id"
-    t.integer  "assunto_id_id"
+    t.string   "desc"
+    t.integer  "disc_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "discplinas", ["assunto_id_id"], name: "index_discplinas_on_assunto_id_id"
-  add_index "discplinas", ["prof_id_id"], name: "index_discplinas_on_prof_id_id"
+  create_table "discs", force: true do |t|
+    t.string   "nome"
+    t.string   "desc"
+    t.integer  "prof_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "profs", force: true do |t|
     t.string   "nome"
     t.string   "email"
     t.string   "senha"
+    t.string   "login"
+    t.integer  "disc_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "provas", force: true do |t|
+    t.integer  "total_alunos"
+    t.integer  "disc_id"
+    t.integer  "assunto_id"
+    t.date     "data_termino"
+    t.time     "hora_termino"
+    t.integer  "nivel"
+    t.string   "instituicao"
+    t.string   "turma"
+    t.string   "desc"
+    t.boolean  "embaralhar_alternativa"
+    t.boolean  "embaralhar_questao"
+    t.integer  "tipo_quest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quests", force: true do |t|
+    t.integer  "nivel"
+    t.integer  "disc_id"
+    t.integer  "assunto_id"
+    t.integer  "tipo"
+    t.text     "pergunta"
+    t.text     "a"
+    t.text     "b"
+    t.text     "c"
+    t.text     "d"
+    t.string   "correta"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
