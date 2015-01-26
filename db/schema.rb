@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150124185249) do
     t.boolean  "embaralhar_alternativa"
     t.boolean  "embaralhar_questao"
     t.integer  "tipo_quest"
+    t.integer  "token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

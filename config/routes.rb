@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  
+
+
+
+
+  resources :discs do
+    resources :assuntos
+  end
+
 
   resources :provas
 

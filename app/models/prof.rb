@@ -1,5 +1,7 @@
 class Prof < ActiveRecord::Base
-	has_many :assuntos
+
+	has_many :provas
+	has_many :discs
 
 
 

@@ -11,3 +11,7 @@
 
 prof1 = Prof.create([{ nome: 'Professor Teste', email: 'eonay.web@gmail.com', senha: 'admin', login: 'admin' }])
 prof2 = Prof.create([{ nome: 'Professor Teste 2', email: 'eonay.gurjao@gmail.com', senha: 'prof', login: 'prof' }])
+
+disc = Disc.create([{ nome: 'Infor', desc: ' maiou memios' }])
+disc = Disc.create([{ nome: 'Matem', desc: ' maiou memios3' }])
+disc = Disc.create([{ nome: 'Portug', desc: ' maiou memios5' }])
