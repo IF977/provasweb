@@ -1,22 +1,45 @@
 Rails.application.routes.draw do
-  
 
-  resources :provas
+
+  resources :proof_issues
+
+  resources :proofs
+
+  resources :alternatives
 
   resources :quests
 
-  get 'main/index'
+  resources :issues
 
-  resources :assuntos
+  resources :subjects
 
-  get 'profs/reset_senha'
-  resources :profs
+  resources :disciplines
 
-  resources :discs
+  resources :teachers
+  
+   resources :issues do
+      resources :alternatives
+   end
+   
+   resources :disciplines do
+      resources :subjects
+   end
+   
+     resources :teachers do
+      resources :disciplines
+   end
 
-  root 'home#index'
+  get 'sessions/new'
 
-  get 'home/index'
+  get 'users/new'
+  get "dados_pessoais" => "teachers#new", :as => "dados_pessoais"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+get "log_in" => "sessions#new", :as => "log_in"
+get "sign_up" => "users#new", :as => "sign_up"
+get "disciplinas" => "disciplines", :as => "disciplinas"
+root :to => "users#new"
+resources :users
+resources :sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
