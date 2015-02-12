@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  resources :answers
+
+  resources :proof_answereds
+
   resources :proof_issues
 
   resources :proofs
@@ -21,6 +25,10 @@ Rails.application.routes.draw do
       resources :alternatives
    end
    
+    resources :issues do
+      resources :proof_issues
+   end
+   
    resources :disciplines do
       resources :subjects
    end
@@ -28,8 +36,35 @@ Rails.application.routes.draw do
      resources :teachers do
       resources :disciplines
    end
+   
+       resources :subjects do
+      resources :proofs
+   end
+   
+         resources :proofs do
+      resources :proof_issues
+   end
+  
+  
+      resources :proof_issues do
+      resources :answers
+   end
+   
+       resources :proof_answereds do
+      resources  :answers
+   end
+   
+       resources :answers do
+      resources  :alternatives
+   end
+  resources :testa_token
+  
+  post 'proof_answereds/testa_token' => 'proof_answered#testa_token' 
+  
+   resources :relatorio
 
   get 'sessions/new'
+
 
   get 'users/new'
   get "dados_pessoais" => "teachers#new", :as => "dados_pessoais"
@@ -37,7 +72,7 @@ Rails.application.routes.draw do
 get "log_in" => "sessions#new", :as => "log_in"
 get "sign_up" => "users#new", :as => "sign_up"
 get "disciplinas" => "disciplines", :as => "disciplinas"
-root :to => "users#new"
+root :to => "users#index"
 resources :users
 resources :sessions
 

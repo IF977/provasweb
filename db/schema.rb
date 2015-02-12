@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129134758) do
+ActiveRecord::Schema.define(version: 20150209104508) do
 
   create_table "alternatives", force: true do |t|
     t.string   "description"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 20150129134758) do
   end
 
   add_index "alternatives", ["issue_id"], name: "index_alternatives_on_issue_id"
+
+  create_table "answers", force: true do |t|
+    t.integer  "proof_answered_id"
+    t.integer  "proof_issue_id"
+    t.integer  "alternative_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["alternative_id"], name: "index_answers_on_alternative_id"
+  add_index "answers", ["proof_answered_id"], name: "index_answers_on_proof_answered_id"
+  add_index "answers", ["proof_issue_id"], name: "index_answers_on_proof_issue_id"
 
   create_table "disciplines", force: true do |t|
     t.string   "name"
@@ -42,6 +54,16 @@ ActiveRecord::Schema.define(version: 20150129134758) do
   end
 
   add_index "issues", ["subject_id"], name: "index_issues_on_subject_id"
+
+  create_table "proof_answereds", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.time     "startTime"
+    t.time     "endTime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "token"
+  end
 
   create_table "proof_issues", force: true do |t|
     t.integer  "proof_id"

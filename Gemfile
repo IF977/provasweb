@@ -31,6 +31,13 @@ gem 'protected_attributes'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem "twitter-bootstrap-rails"
+gem "therubyracer"
+gem "less-rails"
+gem 'bootstrap-datepicker-rails'
+
+gem 'randumb'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
