@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Proof answered:</strong>
+  <%= @answer.proof_answered %>
+</p>
+
+<p>
+  <strong>Proof issue:</strong>
+  <%= @answer.proof_issue %>
+</p>
+
+<p>
+  <strong>Alternative:</strong>
+  <%= @answer.alternative %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

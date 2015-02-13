@@ -1,0 +1,25 @@
+<%= form_for(@proof_issue) do |f| %>
+  <% if @proof_issue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proof_issue.errors.count, "error") %> prohibited this proof_issue from being saved:</h2>
+
+      <ul>
+      <% @proof_issue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :proof_id %><br>
+    <%= f.text_field :proof_id %>
+  </div>
+  <div class="field">
+    <%= f.label :issue_id %><br>
+    <%= f.text_field :issue_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

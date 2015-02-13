@@ -1,0 +1,53 @@
+<%- model_class = Proof -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:message) %></th>
+      <th><%= model_class.human_attribute_name(:token) %></th>
+      <th><%= model_class.human_attribute_name(:closingDate) %></th>
+      <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:questionsNumber) %></th>
+      <th><%= model_class.human_attribute_name(:subject_id) %></th>
+      
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @proofs.each do |proof| %>
+    <% if proof.subject.discipline.teacher.user == current_user %>
+      <tr>
+        <td><%= link_to proof.id, proof_path(proof) %></td>
+        <td><%= proof.message %></td>
+        <td><%= proof.token %></td>
+        <td><%= proof.closingDate %></td>
+        <td><%= proof.status %></td>
+        <td><%= proof.questionsNumber %></td>
+        <td><%= proof.subject.name %></td>
+        
+        
+        
+        <td>
+          <%= link_to t('.Provas Respondidas', :default => t("helpers.links.Ver Provas Respondidas")),
+                      relatorio_index_path(token: proof.token), :class => 'btn btn-default btn-xs' %>
+          
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_proof_path(proof), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      proof_path(proof),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+        <%end%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_proof_path,
+            :class => 'btn btn-primary' %>

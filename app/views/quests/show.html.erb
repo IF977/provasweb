@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @quest.level %>
+</p>
+
+<p>
+  <strong>Discipline:</strong>
+  <%= @quest.discipline %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @quest.subject %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @quest.question %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @quest.teacher %>
+</p>
+
+
+
+<%= link_to 'Adicionar Alternativas', {:controller=>:alternatives, :action=>'new', :quest_id =>params[@quest.id]} %> |
+<%= link_to 'Edit', edit_quest_path(@quest) %> |
+<%= link_to 'Back', quests_path %>

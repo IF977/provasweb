@@ -1,0 +1,38 @@
+<%- model_class = Proof -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:message) %>:</strong></dt>
+  <dd><%= @proof.message %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:header) %>:</strong></dt>
+  <dd><%= @proof.header %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:token) %>:</strong></dt>
+  <dd><%= @proof.token %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:closingDate) %>:</strong></dt>
+  <dd><%= @proof.closingDate %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:duration) %>:</strong></dt>
+  <dd><%= @proof.duration %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @proof.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:questionsNumber) %>:</strong></dt>
+  <dd><%= @proof.questionsNumber %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:subject_id) %>:</strong></dt>
+  <dd><%= @proof.subject_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:teacher_id) %>:</strong></dt>
+  <dd><%= @proof.teacher_id %></dd>
+</dl>
+
+
+ 
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              proofs_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_proof_path(@proof), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              proof_path(@proof),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,0 +1,44 @@
+<h1>Listing answers</h1>
+
+<table>
+  <thead>
+    <tr>
+      
+      <th>Proof issue</th>
+     
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<% count = 0%>
+<%= form_for(@answer) do |f| %>
+  <% @questoesProva.each do |proof_issue| %>
+  <%coutnt = count+ 1%>
+  <tr>
+       
+        <td><strong><%= proof_issue.issue.inunciation %></td></strong>
+        </tr><br>
+       
+
+    <% proof_issue.issue.alternatives.each do |alternativa| %>
+     <tr>
+   <td><%= f.radio_button_tag(:alternative_id, "alternativa.id")%> <%=alternativa.description %></td>
+   <%= f.hidden_field :proof_answered_id, :value=>current_aluno.id %>
+   <%= f.hidden_field :proof_issue_id, :value=>proof_issue.id %>
+       
+     
+       </tr>
+        <%end%>
+  <%end%>
+   <div class="actions">
+    <%= f.submit %>
+  </div>
+   <%end%>
+
+  <tbody>
+
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Answer', new_answer_path %>

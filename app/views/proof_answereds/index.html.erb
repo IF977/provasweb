@@ -1,0 +1,33 @@
+<h1>Listing proof_answereds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Starttime</th>
+      <th>Endtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proof_answereds.each do |proof_answered| %>
+    
+    
+        <td><%= proof_answered.name %></td>
+        <td><%= proof_answered.email %></td>
+        <td><%= proof_answered.startTime %></td>
+        <td><%= proof_answered.endTime %></td>
+        <td><%= link_to 'Show', proof_answered %></td>
+        <td><%= link_to 'Edit', edit_proof_answered_path(proof_answered) %></td>
+        <td><%= link_to 'Destroy', proof_answered, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proof answered', new_proof_answered_path %>

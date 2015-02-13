@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Proof:</strong>
+  <%= @proof_issue.proof %>
+</p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @proof_issue.issue %>
+</p>
+
+<%= link_to 'Edit', edit_proof_issue_path(@proof_issue) %> |
+<%= link_to 'Back', proof_issues_path %>

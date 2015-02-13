@@ -1,0 +1,79 @@
+<%= form_for @proof, :html => { :class => "form-horizontal proof" } do |f| %>
+
+    <% if @proof.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@proof.errors.count, "error") %> prohibited this proof from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @proof.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :message, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :message, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proof[:message]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :header, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :header, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proof[:header]) %>
+  </div>
+ 
+  <div class="control-group">
+    <%= f.label :closingDate, :class => 'control-label' %>
+    <div class="controls">
+      <%=  f.text_field :closingDate , :class => 'form-control' %>
+    </div>
+    <%= error_span(@proof[:closingDate]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :duration, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.time_select :duration, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proof[:duration]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= select("proof", "status",
+                options_for_select([["Ativo", "Ativo"],["Inativo","Inativo"]]),
+                {include_blank: true})
+  %>
+    </div>
+    <%= error_span(@proof[:status]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :questionsNumber, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :questionsNumber, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proof[:questionsNumber]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :subject_id, :class => 'control-label' %>
+    <div class="controls">
+     <%= f.grouped_collection_select( :subject_id, current_user.teacher.disciplines, :subjects, :name, :id , :name, include_blank: true) %>
+    </div>
+    <%= error_span(@proof[:subject_id]) %>
+  </div>
+<%= f.hidden_field :teacher_id, :value=>current_user.teacher.id %>
+<%= f.hidden_field :token, :value=>create_token%>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            proofs_path, :class => 'btn btn-default' %>
+
+<% end %>

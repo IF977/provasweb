@@ -1,0 +1,65 @@
+<%- model_class = Issue -%>
+<div class="page-header">
+  <h1><%#=t '.title', :default => model_class.model_name.human.titleize %>Alternativas Questão</h1>
+</div>
+
+
+  <strong><%= model_class.human_attribute_name(:inunciation) %>:</strong>
+  <h5><%= @issue.inunciation %></h5><br>
+
+
+
+
+<h4>Alternativas</h4>
+<table>
+
+<% @issue.alternatives.each do |alternativa| %>
+
+  <tr>
+    <% if alternativa.correct %>
+    <td><strong><%= alternativa.description %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong></td>
+    <%else%>
+    <td><%= alternativa.description %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+    <%end%>
+    <td><%= link_to 'Apagar Alternativa', [alternativa.issue, alternativa],
+               :confirm => 'Tem certeza?',
+               :method => :delete %></td>
+  </tr>
+
+  
+
+<% end %>
+</table>
+ <br>
+<h4>Adicione uma alternativa:</h4>
+<%= form_for([@issue, @issue.alternatives.build]) do |f| %>
+  <div class="controls">
+    <%= f.label :description %><br />
+    </div>
+    <div class="controls">
+    <%= f.text_field :description, :class => 'form-control' %>
+  </div>
+  <div class="controls">
+    <%= f.label :correct %><br />
+    </div>
+    <div class="controls">
+    <%= f.check_box :correct, {}, true, false %>
+  </div>
+  <div class="actions">
+     <%= f.submit nil, :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+ 
+<br />
+
+
+
+<%#= link_to t('.back', :default => t("helpers.links.back")),
+              issues_path, :class => 'btn btn-default'  %>
+<%#= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_issue_path(@issue), :class => 'btn btn-default' %>
+<%#= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              issue_path(@issue),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

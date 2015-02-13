@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 1
+  discipline_id: 
+  subject_id: 
+  question: MyText
+  teacher_id: 
+
+two:
+  level: 1
+  discipline_id: 
+  subject_id: 
+  question: MyText
+  teacher_id: 

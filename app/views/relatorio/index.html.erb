@@ -1,0 +1,43 @@
+<div class="page-header">
+  <h1>Provas Respondidas</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Aluno</th>
+      <th>Email</th>
+      <th>Total de Acertos</th>
+      <th>Total de Erros</th>
+      <th>Percentual de Acerto</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <% @proof_answereds.each do |proof_answered| %>
+      <tr>
+        <td><%= proof_answered.name %></td>
+        <td><%= proof_answered.email %></td>
+        <%contTrue =0%>
+        <%contFalse = 0%>
+        <%proof_answered.answers.each do |respostas|%>
+        <%if !respostas.alternative.nil? %>
+          <%if respostas.alternative.correct%>
+            <%contTrue = contTrue + 1%>
+          <%else%>
+            <%contFalse = contFalse + 1%>
+          <%end%>
+          <%end%>
+        <%end%>
+        
+         <td> <%=contTrue %></td>
+         <td> <%=contFalse %></td>
+          <%@prova.each do |prova| %>
+            <td><%=(contTrue * 100) /prova.questionsNumber%>%</td>
+          <% end %>
+            
+        
+        <td><%#= link_to 'Show', relatorio_path(proof_answered: proof_answered.id) %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>

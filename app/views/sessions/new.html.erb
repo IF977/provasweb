@@ -1,0 +1,28 @@
+
+
+<h1>Logar</h1>
+<%= form_tag sessions_path do %>
+
+  <div class="control-group">
+    <%= label_tag :email%>
+    <div class="controls">
+      <%= text_field_tag :email, params[:email], :class => 'form-control' %>
+    </div>
+   
+  </div>
+  <div class="control-group">
+    <%= label_tag "Senha" %>
+    <div class="controls">
+      <%= password_field_tag :password,params[:password], :class => 'form-control' %>
+    </div>
+
+  </div>
+  
+  <%= submit_tag "Logar" , :class => 'btn btn-primary' %>
+  
+
+
+<% end %>
+
+
+

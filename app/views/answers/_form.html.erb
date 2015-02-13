@@ -1,0 +1,44 @@
+<%= form_for(@answer) do |f| %>
+  <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% @answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+<% @questoesProva.each do |proof_issue| %>
+  <tr>
+    <br>
+       <td><strong><%= proof_issue.issue.inunciation %></td></strong>
+  </tr><br>
+  <% ###Inserido por Carlos Eduardo Egito %>
+  <%#= form_for (@answers[proof_issue.issue.id] || Answer.new) do |f| %>
+        <%# question.answers.each do |ans| %>
+          <%#= f.radio_button :answer, ans.id %>
+          <%#= f.label( ('answer_' << ans.id).to_sym, ans.text ) %>
+          <%# end %>
+  <%########%>
+  
+  <% proof_issue.issue.alternatives.each do |alternativa| %>
+     <tr>
+   
+         <td><%= f.radio_button(:alternative_id, alternativa.id)%> <%=alternativa.description %></td><br>
+         <%= f.hidden_field :proof_answered_id, :value=>current_aluno.id %>
+         <%= f.hidden_field :proof_issue_id, :value=>proof_issue.id %>
+      </tr>
+  <% end %>
+ <% end %>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

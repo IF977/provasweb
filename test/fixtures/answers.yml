@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proof_answered_id: 
+  proof_issue_id: 
+  alternative_id: 
+
+two:
+  proof_answered_id: 
+  proof_issue_id: 
+  alternative_id: 

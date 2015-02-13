@@ -1,0 +1,32 @@
+<div class="page-header">
+  <h1><%#=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%#= model_class.human_attribute_name(:name) %></th>
+      
+ 
+      
+      <th><%#=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+    
+   
+ <%@arrayAlunos.uniq!.each do |aluno|%>
+  
+    
+      <%#ids = aluno.to_i%>
+      <%#if ids =! 0%>
+   <%=aluno.answer%>
+   
+   
+   <%#end%>
+      
+ 
+   <%end%>
+  
+   
+    
+        
+    
+  

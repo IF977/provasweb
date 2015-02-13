@@ -1,0 +1,5 @@
+<% p.issue.alternatives.each do |alternativa| %>
+        <tr>
+           <td><%= i.radio_button(p.id, alternativa.id)%> <%=alternativa.description %></td><br>
+        </tr>
+        <% end %>

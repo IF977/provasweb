@@ -1,0 +1,60 @@
+"pt-BR":
+    activerecord:
+        models: 
+            user: Usuários
+            teacher: Professores
+            discipline: Disciplinas
+            subject: Assuntos
+            issue: Questões
+            alternative: Alternativas
+            proof: Provas
+            proof_answered: Acessar
+        attributes:
+            user:
+                id: "Código"
+                email: "Email"
+                password: "Senha"
+                password_confirmation: "Confirmar Senha"
+            teacher:
+                id: "Código"
+                name: "Nome"
+                cpf: "CPF"
+                phone: "Telefone"
+                date: "Data de Nascimento"
+            discipline:
+                id: "Código"
+                name: "Nome"
+                teacher_id: "Professor"
+                created_at: "Criado em"
+            subject:
+                id: "Código"
+                name: "Nome"
+                discipline_id: "Disciplina"
+                created_at: "Criado em"
+            issue:
+                id: "Código"
+                inunciation: "Enunciado"
+                dificulty: "Dificuldade"
+                subject_id: "Assunto"
+                created_at: "Criado em"
+            alternative:
+                id: "Código"
+                description: "Descrição"
+                correct: "Alternativa Correta"
+                created_at: "Criado em"
+            proof:
+                id: "Código"
+                message: "Descrição"
+                header: "Cabeçalho"
+                token: "Token"
+                closingDate: "Data de Fechamento"
+                status: "Status"
+                questionsNumber: "Número de Questões"
+                subject_id: "Assunto"
+                created_at: "Criado em"
+            proof_answered:
+                id: "Código"
+                name: "Nome"
+                email: "Email"
+                token: "Token"
+               
